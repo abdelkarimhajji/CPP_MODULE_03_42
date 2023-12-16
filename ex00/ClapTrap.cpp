@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/16 12:58:10 by ahajji           ###   ########.fr       */
+/*   Created: 2023/12/16 12:42:59 by ahajji            #+#    #+#             */
+/*   Updated: 2023/12/16 12:57:22 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int main(void)
+ClapTrap::ClapTrap(std::stirng &name)
 {
-    ClapTrap test("hi");
-    
-    return 0;
+    this->name = name;
 }

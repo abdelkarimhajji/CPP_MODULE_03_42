@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/16 12:58:10 by ahajji           ###   ########.fr       */
+/*   Created: 2023/12/16 12:42:55 by ahajji            #+#    #+#             */
+/*   Updated: 2023/12/16 12:54:37 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include <oistream>
 
-int main(void)
+class ClapTrap
 {
-    ClapTrap test("hi");
-    
-    return 0;
+    private:
+        std::string name;
+        unsigned int hitPoints;
+        unsigned int energyPoints;
+        unsigned int attackDamage;
+    public:
+        ClapTrap(std::stirng &name);       
 }
