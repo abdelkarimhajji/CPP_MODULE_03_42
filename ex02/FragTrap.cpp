@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 15:47:05 by ahajji           ###   ########.fr       */
+/*   Created: 2023/12/19 15:17:56 by ahajji            #+#    #+#             */
+/*   Updated: 2023/12/19 15:45:30 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-int main(void)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-    // Create a ClapTrap instance
-    FragTrap fragTrap("CL4P-TP");
+    this->hitPoints = 100;
+    this->energyPoints = 100;
+    this->attackDamage = 30;
+    std::cout << "This is the constructer FragTrap" << std::endl;
+}
 
-    // Test attack, takeDamage, and beRepaired functions
-    fragTrap.attack("Enemy1");
-    fragTrap.takeDamage(3);
-    fragTrap.beRepaired(2);
-    fragTrap.attack("Enemy2");
+FragTrap::~FragTrap()
+{
+    std::cout << "This is the destructer FragTrap" << std::endl;
+}
 
-    return 0;
+void FragTrap::highFivesGuys(void)
+{
+    std::cout << "FragTrap " << this->name << " requests a high five." << std::endl;
 }
