@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:42:59 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 12:13:03 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/19 15:41:11 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ ClapTrap::ClapTrap(std::string name)
     this->energyPoints = 10;
     this->attackDamage = 0;
 }
+
 ClapTrap::~ClapTrap()
 {
     

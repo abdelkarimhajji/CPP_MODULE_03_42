@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 12:42:55 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 12:29:57 by ahajji           ###   ########.fr       */
+/*   Created: 2023/12/20 10:38:16 by ahajji            #+#    #+#             */
+/*   Updated: 2023/12/20 11:47:01 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
+#include "DiamondTrap.hpp"
 
-class ClapTrap
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
-    private:
-        std::string name;
-        unsigned int hitPoints;
-        unsigned int energyPoints;
-        unsigned int attackDamage;
-    public:
-        ClapTrap(std::string name);
-        ~ClapTrap();
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
-};
+    this->name = name;
+    std::cout << "This is the constructer DiamondTrap" << std::endl;
+}
+
+DiamondTrap::~DiamondTrap()
+{
+    
+}

@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/17 10:22:29 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/17 10:50:58 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int main(void)
     clapTrap.takeDamage(3);
     clapTrap.beRepaired(2);
     clapTrap.attack("Enemy2");
+
     return 0;
 }

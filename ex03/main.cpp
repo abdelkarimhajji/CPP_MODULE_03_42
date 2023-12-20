@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 12:42:55 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 12:29:57 by ahajji           ###   ########.fr       */
+/*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
+/*   Updated: 2023/12/19 15:47:05 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <iostream>
+#include "FragTrap.hpp"
 
-class ClapTrap
+int main(void)
 {
-    private:
-        std::string name;
-        unsigned int hitPoints;
-        unsigned int energyPoints;
-        unsigned int attackDamage;
-    public:
-        ClapTrap(std::string name);
-        ~ClapTrap();
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);
-};
+    // Create a ClapTrap instance
+    FragTrap fragTrap("CL4P-TP");
+
+    // Test attack, takeDamage, and beRepaired functions
+    fragTrap.attack("Enemy1");
+    fragTrap.takeDamage(3);
+    fragTrap.beRepaired(2);
+    fragTrap.attack("Enemy2");
+
+    return 0;
+}
