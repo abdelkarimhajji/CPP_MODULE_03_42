@@ -6,11 +6,13 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:42:55 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 15:34:25 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/22 11:03:01 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef CLAP_TRAP
+#define CLAP_TRAP
+
 #include <iostream>
 
 class ClapTrap
@@ -27,3 +29,5 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 };
+
+#endif

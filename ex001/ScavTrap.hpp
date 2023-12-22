@@ -6,11 +6,13 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:55:07 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 12:59:59 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/22 11:02:24 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef SCAV_TRAP
+#define SCAV_TRAP
+
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
@@ -21,3 +23,5 @@ class ScavTrap : public ClapTrap
         void attack(const std::string& target);
         ~ScavTrap();
 };
+
+#endif
