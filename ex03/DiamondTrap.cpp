@@ -6,13 +6,13 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 10:38:16 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/22 10:54:34 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/23 10:46:56 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {
     this->name = name;
     this->hitPoints = 100;
