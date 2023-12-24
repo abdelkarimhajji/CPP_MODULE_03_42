@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:42:59 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/17 10:28:55 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/23 15:56:50 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,26 @@ ClapTrap::ClapTrap(std::string name)
     this->energyPoints = 10;
     this->attackDamage = 0;
 }
+
 ClapTrap::~ClapTrap()
 {
     
+}
+
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+}
+ClapTrap&   ClapTrap::operator=(const ClapTrap &copy)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    return *this;
 }
 
 void ClapTrap::attack(const std::string& target)
