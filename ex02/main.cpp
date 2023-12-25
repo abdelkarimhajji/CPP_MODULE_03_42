@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 15:47:05 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/24 13:12:56 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 int main(void)
 {
-    // Create a ClapTrap instance
     FragTrap fragTrap("CL4P-TP");
 
-    // Test attack, takeDamage, and beRepaired functions
-    fragTrap.attack("Enemy1");
+    fragTrap.attack("enemy1");
     fragTrap.takeDamage(3);
     fragTrap.beRepaired(2);
-    fragTrap.attack("Enemy2");
+    fragTrap.attack("enemy2");
 
     return 0;
 }

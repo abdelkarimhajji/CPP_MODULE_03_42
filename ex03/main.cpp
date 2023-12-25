@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/23 10:48:04 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/24 13:12:51 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 int main(void)
 {
-    // Create a ClapTrap instance
-    DiamondTrap DiamondTrap("CL4P-TP");
+    DiamondTrap DiamondTrap("CL4");
 
-    // Test attack, takeDamage, and beRepaired functions
-    DiamondTrap.attack("Enemy1");
+    DiamondTrap.attack("enemy1");
     DiamondTrap.takeDamage(3);
     DiamondTrap.beRepaired(2);
-    DiamondTrap.attack("Enemy2");
+    DiamondTrap.attack("enemy2");
 
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:55:03 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/19 13:02:50 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/25 10:27:43 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,37 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
+    this->name = name;
     std::cout << "i am from scavTrap consturcter\n";
 }
 
 ScavTrap::~ScavTrap() 
 {
     std::cout << "i am from scavTrap descructer\n";
+};
+
+
+ScavTrap::ScavTrap(const ScavTrap &copy)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+}
+
+ScavTrap::ScavTrap()
+{
+    
 }
 
 void ScavTrap::guardGate()
 {
     std::cout << "ScavTrap " << this->name << " is now is grate keeper" << std::endl;
 }
+
 void ScavTrap::attack(const std::string& target)
 {
+    ClapTrap::attack(target);
     if(this->hitPoints > 0 && this->energyPoints > 0)
         {
             this->energyPoints--;
