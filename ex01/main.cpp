@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/25 10:40:36 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/25 12:29:54 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int main(void)
 
     // std::cout << "\n";
     ScavTrap slapTrap("CL4");
+    std::cout << "iiii\n";
+    ScavTrap slapTrap3(slapTrap);
+    // slapTrap3.attack("enemy1");
     // ClapTrap clapTrap("CL4");
     // clapTrap.attack("f");
-    slapTrap.attack("enemy1");
     // slapTrap.takeDamage(3);
     // slapTrap.beRepaired(2);
     // slapTrap.attack("enemy2");

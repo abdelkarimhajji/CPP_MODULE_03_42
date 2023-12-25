@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:55:03 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/25 11:54:45 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/25 12:34:59 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,9 @@ ScavTrap::~ScavTrap()
     std::cout << "i am from scavTrap descructer\n";
 };
 
-
-ScavTrap::ScavTrap(const ScavTrap &copy)
-{
-    this->name = copy.name;
-    this->hitPoints = copy.hitPoints;
-    this->energyPoints = copy.energyPoints;
-    this->attackDamage = copy.attackDamage;
-}
-
 ScavTrap::ScavTrap()
 {
-    
+    std::cout << "default constructer scavtrap" << std::endl; 
 }
 
 void ScavTrap::guardGate()
