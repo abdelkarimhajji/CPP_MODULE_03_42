@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:55:03 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/25 10:27:43 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/25 11:54:45 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void ScavTrap::guardGate()
 
 void ScavTrap::attack(const std::string& target)
 {
-    ClapTrap::attack(target);
     if(this->hitPoints > 0 && this->energyPoints > 0)
         {
             this->energyPoints--;
