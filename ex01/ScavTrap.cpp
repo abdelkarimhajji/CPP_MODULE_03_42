@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:55:03 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/25 12:34:59 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/25 14:00:50 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,25 @@ ScavTrap::~ScavTrap()
 ScavTrap::ScavTrap()
 {
     std::cout << "default constructer scavtrap" << std::endl; 
+}
+
+ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy.name)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    std::cout << "copy constructer ScavTrap" << std::endl;
+}
+
+ScavTrap&   ScavTrap::operator=(const ScavTrap &copy)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    std::cout << "The assignment operator = scavtrap" << std::endl;
+    return *this;
 }
 
 void ScavTrap::guardGate()
