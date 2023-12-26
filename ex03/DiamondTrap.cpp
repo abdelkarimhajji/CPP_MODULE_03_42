@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 10:38:16 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/23 10:46:56 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/26 12:28:42 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,20 @@ DiamondTrap::~DiamondTrap()
 {
     std::cout << "This is the deconstructer DiamondTrap" << std::endl;
 }
-
+DiamondTrap::DiamondTrap(const DiamondTrap& copy) : ClapTrap(copy.name + "_clap_name"), ScavTrap(copy.name), FragTrap(copy.name)
+{
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+}
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap &copy) 
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    return *this;
+}
 void    DiamondTrap::whoAmI()
 {
     std::cout << "DiamonTrap " << this->name << std::endl;
