@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:42:59 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/17 10:28:55 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/26 12:01:29 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,24 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::~ClapTrap()
 {
     
+}
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    std::cout << "copy constructer claptrap" << std::endl;
+}
+
+ClapTrap&   ClapTrap::operator=(const ClapTrap &copy)
+{
+    this->name = copy.name;
+    this->hitPoints = copy.hitPoints;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    std::cout << "The assignment operator = claptrap" << std::endl;
+    return *this;
 }
 
 void ClapTrap::attack(const std::string& target)

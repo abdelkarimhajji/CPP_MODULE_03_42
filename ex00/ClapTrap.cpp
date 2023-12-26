@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:42:59 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/24 13:15:33 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/25 15:55:04 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
     this->energyPoints = copy.energyPoints;
     this->attackDamage = copy.attackDamage;
 }
+
 ClapTrap&   ClapTrap::operator=(const ClapTrap &copy)
 {
     this->name = copy.name;
