@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:42:59 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/26 12:01:20 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/02 13:07:22 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,19 @@ ClapTrap::ClapTrap(std::string name)
     this->hitPoints = 10;
     this->energyPoints = 10;
     this->attackDamage = 0;
+    std::cout << "i am form claptrap param constructer" << std::endl;
+}
+ClapTrap::ClapTrap()
+{
+    this->name = "claptrap";
+    this->hitPoints = 10;
+    this->energyPoints = 10;
+    this->attackDamage = 0;
+    std::cout << "default constructer claptrap" << std::endl;
 }
 ClapTrap::~ClapTrap()
 {
-    
+    std::cout << "call destructer claptrap" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)

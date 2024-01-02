@@ -1,6 +1,6 @@
 NAME = Fragtrap
 
-SRC = ClapTrap.cpp main.cpp FragTrap.cpp
+SRC = ClapTrap.cpp main.cpp FragTrap.cpp ScavTrap.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
