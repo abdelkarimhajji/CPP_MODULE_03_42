@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 10:55:03 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/26 12:22:14 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/02 13:06:16 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,23 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
-    std::cout << "i am from scavTrap consturcter\n";
+    this->name = name;
+    std::cout << "i am from scavTrap consturcter param\n";
 }
 
+ScavTrap::ScavTrap()
+{
+    this->hitPoints = 100;
+    this->energyPoints = 50;
+    this->attackDamage = 20;
+    this->name = "scavtrap";
+    std::cout << "default constructer scavtrap" << std::endl; 
+}
 ScavTrap::~ScavTrap() 
 {
     std::cout << "i am from scavTrap descructer\n";
-}
+};
+
 
 ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy.name)
 {
@@ -48,6 +58,7 @@ void ScavTrap::guardGate()
 {
     std::cout << "ScavTrap " << this->name << " is now is grate keeper" << std::endl;
 }
+
 void ScavTrap::attack(const std::string& target)
 {
     if(this->hitPoints > 0 && this->energyPoints > 0)
