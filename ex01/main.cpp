@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:32:48 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/25 14:14:10 by ahajji           ###   ########.fr       */
+/*   Updated: 2024/01/02 12:10:42 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,23 @@
 
 int main(void)
 {
-    // ClapTrap clapTrap("CLTP22222");
-
-    // clapTrap.attack("enemy1");
-    // clapTrap.takeDamage(3);
-    // clapTrap.beRepaired(2);
-    // clapTrap.attack("enemy2");
-
-    // std::cout << "\n";
-    ClapTrap clapTrap2("test");
-    std::cout << "hi\n";
-    ClapTrap clapTrap3(clapTrap2);
-    
-    // ScavTrap slapTrap("CL4");
-    // ScavTrap slapTrap3(slapTrap);
-    // slapTrap3.attack("enemy1");
+    ClapTrap claptrap("karim");
+	std::cout << "_______________________________\n" << std::endl;
+	ScavTrap scavtrap("simo");
+	std::cout << "_______________________________\n" << std::endl;
+	claptrap.attack("Enemy1");
+	claptrap.takeDamage(5);
+	claptrap.beRepaired(3);
+	claptrap.attack("Enemy2");
+	claptrap.takeDamage(12);
+	claptrap.beRepaired(8);
+	std::cout << "_______________________________\n" << std::endl;
+	scavtrap.attack("Enemy3");
+	std::cout << "_______________________________\n" << std::endl;
+	scavtrap.takeDamage(15);
+	std::cout << "_______________________________\n" << std::endl;
+	scavtrap.guardGate();
+	std::cout << "_______________________________\n" << std::endl;
     
     return 0;
 }
