@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 10:38:16 by ahajji            #+#    #+#             */
-/*   Updated: 2023/12/26 12:30:13 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/12/26 15:02:44 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ DiamondTrap::DiamondTrap(const DiamondTrap& copy) : ClapTrap(copy.name + "_clap_
     this->energyPoints = copy.energyPoints;
     this->attackDamage = copy.attackDamage;
 }
+
+
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap &copy) 
 {
     this->name = copy.name;
